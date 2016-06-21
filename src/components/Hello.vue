@@ -1,11 +1,13 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
+  component: {
+    Menu
+  }
   data () {
     return {
       // note: changing this line won't causes changes
