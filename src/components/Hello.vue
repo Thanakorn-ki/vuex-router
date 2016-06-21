@@ -1,13 +1,17 @@
 <template>
   <div class="hello">
+ {{getCount}}
   </div>
 </template>
 
 <script>
+import { getCount } from '../vuex/getters'
 export default {
-  component: {
-    Menu
-  }
+  vuex: {
+    getters: {
+      getCount: getCount
+    }
+  },
   data () {
     return {
       // note: changing this line won't causes changes
