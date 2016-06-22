@@ -4,7 +4,8 @@ Vue.use(Vuex)
 
 const state = {
   // When the app starts, count is set to 0
-  count: 0
+  count: 0,
+  state_name: ''
 }
 
 // Create an object storing various mutations. We will write the mutation
@@ -13,6 +14,9 @@ const mutations = {
   // You can make any modifications you want inside this function
   INCREMENT (state, amount) {
     state.count = state.count + amount
+  },
+  addname (state, name) {
+    state.state_name = name
   }
 }
 

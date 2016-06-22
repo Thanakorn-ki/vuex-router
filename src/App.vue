@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <div id="menu">
     <ul>
         <li v-link="{ path: '/' }">Home</li>
@@ -14,6 +14,7 @@
 </template>
 <script>
 import store from './vuex/store'
+// import $ from 'jquery'
 export default {
   store,
   data: function () {

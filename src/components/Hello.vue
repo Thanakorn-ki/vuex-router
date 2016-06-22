@@ -1,24 +1,31 @@
 <template>
   <div class="hello">
  {{getCount}}
+ <br>
+ name : {{getNames}}
   </div>
 </template>
 
 <script>
-import { getCount } from '../vuex/getters'
+import { getCount, getName } from '../vuex/getters'
 export default {
   vuex: {
     getters: {
-      getCount: getCount
+      getCount: getCount,
+      getNames: getName
     }
   },
   data () {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
       msg: 'Hello World!'
+    }
+  },
+  ready: function () {
+    this.add()
+  },
+  methods: {
+    add: function () {
+      console.log(this.getName)
     }
   }
 }
